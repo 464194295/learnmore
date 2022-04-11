@@ -39,7 +39,6 @@ public:
         string playkey = music_string.substr(0,1); //从0开始，拷贝一个字符
         int palyvalue = atoi(music_string.substr(2,1).c_str());
 
-        //music_string = music_string.substr(4);
 
         Execute(playkey,palyvalue);
     }
@@ -123,10 +122,7 @@ public:
 int main()
 {
     string music = "O 2 E 0.5 G 0.5 A 3 E 0.5 D 3";
-    playContent* palyC = new playContent(music);
-
-    //这里使用了自己做的HASH函数，方便快捷，但不够安全
-    
+    playContent* palyC = new playContent(music);    
 
 
     Expression* exp = nullptr;
